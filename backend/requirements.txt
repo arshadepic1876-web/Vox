@@ -1,0 +1,14 @@
+# Flask core & extensions
+Flask>=3.0.3
+Flask-Cors>=4.0.1
+
+# Environment & utilities
+python-dotenv>=1.0.1
+python-dateutil>=2.9.0
+requests>=2.32.3
+
+# AWS SDK for Python
+boto3>=1.35.0
+
+# Production WSGI server (Linux/EC2 only; excluded on Windows)
+gunicorn>=23.0.0; sys_platform != "win32"

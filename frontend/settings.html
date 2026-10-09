@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - VOX Task Manager</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-inner">
+                <a href="index.html" class="brand">
+                    <div class="brand-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+                    </div>
+                    <div class="brand-text">
+                        <h1>VOX</h1>
+                        <span>AI Task Manager</span>
+                    </div>
+                </a>
+
+                <nav>
+                    <ul class="nav-links">
+                        <li class="nav-item">
+                            <a href="index.html">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="tasks.html">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
+                                <span>Tasks</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="settings.html" class="active">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" style="max-width: 800px;">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <svg viewBox="0 0 20 20" fill="currentColor" width="22" height="22"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+                    Settings & System Health
+                </h2>
+            </div>
+
+            <!-- Server Status & Diagnostics Card -->
+            <div class="task-card" style="margin-bottom: 1.5rem; flex-direction: column;">
+                <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>⚡</span>
+                    Backend & Cloud Diagnostics
+                </h3>
+
+                <div class="preview-summary" style="width: 100%; margin-bottom: 0;">
+                    <div class="preview-row">
+                        <span class="preview-row-label">API Status:</span>
+                        <span class="preview-row-value" id="diag-status">Checking...</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-row-label">Configured Timezone:</span>
+                        <span class="preview-row-value" id="diag-timezone">Asia/Kolkata</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-row-label">Active Storage Layer:</span>
+                        <span class="preview-row-value" id="diag-storage">Local JSON</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-row-label">AWS Region:</span>
+                        <span class="preview-row-value" id="diag-region">ap-south-1</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-row-label">Amazon S3 Audio Bucket:</span>
+                        <span class="preview-row-value" id="diag-s3">Not Configured</span>
+                    </div>
+                    <div class="preview-row">
+                        <span class="preview-row-label">AI Task Understanding Provider:</span>
+                        <span class="preview-row-value" id="diag-ai">Rule-based (Offline)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Preferences Card -->
+            <div class="task-card" style="margin-bottom: 1.5rem; flex-direction: column;">
+                <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">
+                    Speech & Language Preferences
+                </h3>
+
+                <div class="form-group" style="width: 100%;">
+                    <label for="pref-language">Spoken Language</label>
+                    <select id="pref-language" class="form-control">
+                        <option value="en-US" selected>English (United States)</option>
+                        <option value="en-IN">English (India)</option>
+                        <option value="en-GB">English (United Kingdom)</option>
+                    </select>
+                    <small style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem; display: block;">
+                        Used by Amazon Transcribe to optimize speech vocabulary recognition.
+                    </small>
+                </div>
+            </div>
+
+            <!-- College Project Architecture Summary -->
+            <div class="task-card" style="flex-direction: column;">
+                <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;">
+                    College Project Information
+                </h3>
+                <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.6;">
+                    <strong>Project Title:</strong> AI Voice-to-Text Task Manager using AWS<br>
+                    <strong>Architecture:</strong> Fully decoupled HTML5/CSS3/Vanilla JS Frontend + Python Flask REST API Backend.<br>
+                    <strong>AWS Cloud Integration:</strong> Amazon S3 (Transient Audio Buffer), Amazon Transcribe (Speech-to-Text), Amazon EC2 (Hosting), Amazon DynamoDB (Scalable Task Storage).
+                </p>
+            </div>
+        </main>
+
+        <div id="toast-container" aria-live="polite"></div>
+
+        <footer class="app-footer">
+            <p>VOX &copy; 2026 &bull; AI Voice-to-Text Task Manager using AWS &bull; College Engineering Project</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const diagStatus = document.getElementById('diag-status');
+            const diagTimezone = document.getElementById('diag-timezone');
+            const diagStorage = document.getElementById('diag-storage');
+            const diagRegion = document.getElementById('diag-region');
+            const diagS3 = document.getElementById('diag-s3');
+            const diagAi = document.getElementById('diag-ai');
+
+            try {
+                const res = await Api.checkHealth();
+                if (res && res.success) {
+                    diagStatus.innerHTML = '<span style="color: var(--color-low);">● Online</span>';
+                    diagTimezone.textContent = res.data.config.timezone || 'Asia/Kolkata';
+                    diagStorage.textContent = res.data.config.storage_backend === 'dynamodb' ? 'Amazon DynamoDB' : 'Local JSON Store';
+                    diagRegion.textContent = res.data.config.aws_region || 'ap-south-1';
+                    diagS3.textContent = res.data.config.aws_s3_configured ? 'Configured' : 'Not Connected (Using local uploads)';
+                    diagAi.textContent = res.data.config.ai_parser_provider;
+                } else {
+                    diagStatus.innerHTML = '<span style="color: var(--color-urgent);">● Offline</span>';
+                }
+            } catch {
+                diagStatus.innerHTML = '<span style="color: var(--color-urgent);">● Offline</span>';
+            }
+        });
+    </script>
+    <script src="js/space.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tasks - VOX Task Manager</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-inner">
+                <a href="index.html" class="brand">
+                    <div class="brand-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+                    </div>
+                    <div class="brand-text">
+                        <h1>VOX</h1>
+                        <span>AI Task Manager</span>
+                    </div>
+                </a>
+
+                <nav>
+                    <ul class="nav-links">
+                        <li class="nav-item">
+                            <a href="index.html">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="tasks.html" class="active">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
+                                <span>Tasks</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="settings.html">
+                                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <svg viewBox="0 0 20 20" fill="currentColor" width="22" height="22"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+                    Task Inventory
+                </h2>
+
+                <button class="btn btn-primary" id="open-add-modal-btn">
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                    <span>+ Add Task</span>
+                </button>
+            </div>
+
+            <!-- Sorting & Filtering Controls Bar -->
+            <section class="tasks-toolbar" style="margin-bottom: 1.5rem;">
+                <div class="search-box" style="flex: 1; max-width: 320px;">
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/></svg>
+                    <input type="text" id="task-search-input" placeholder="Search by title, description...">
+                </div>
+
+                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">
+                        <span>Sort By:</span>
+                        <select id="sort-select" class="form-control" style="padding: 0.4rem 0.65rem; font-size: 0.85rem; width: auto;">
+                            <option value="smart" selected>Smart (Urgent &rarr; Overdue &rarr; Due)</option>
+                            <option value="dueDate">Due Date (Earliest)</option>
+                            <option value="priority">Priority (Highest)</option>
+                            <option value="created">Created Date (Newest)</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; font-weight: 500; color: var(--text-muted);">
+                        <span>Category:</span>
+                        <select id="category-filter-select" class="form-control" style="padding: 0.4rem 0.65rem; font-size: 0.85rem; width: auto;">
+                            <option value="all" selected>All Categories</option>
+                            <option value="College">College</option>
+                            <option value="Work">Work</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Health">Health</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Meeting">Meeting</option>
+                            <option value="Study">Study</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tasks Container -->
+            <section class="tasks-container" id="tasks-container">
+                <div class="empty-state" id="tasks-empty-state">
+                    <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    <h3>No tasks found</h3>
+                    <p>You have no tasks matching the selected filters. Create one to get started!</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- ADD / EDIT TASK MODAL -->
+        <div class="modal-overlay" id="task-form-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="form-modal-title">Create New Task</h3>
+                    <button class="modal-close" onclick="closeModal('task-form-modal')">&times;</button>
+                </div>
+                <form id="task-form">
+                    <div class="modal-body">
+                        <input type="hidden" id="form-task-id">
+
+                        <div class="form-group">
+                            <label for="form-title">Task Title *</label>
+                            <input type="text" id="form-title" class="form-control" placeholder="e.g., Submit DBMS assignment" required maxlength="200">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-description">Description</label>
+                            <textarea id="form-description" class="form-control" rows="2" placeholder="Optional notes or details..."></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-due-date">Due Date</label>
+                                <input type="date" id="form-due-date" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-due-time">Due Time</label>
+                                <input type="time" id="form-due-time" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-priority">Priority</label>
+                                <select id="form-priority" class="form-control">
+                                    <option value="LOW">Low</option>
+                                    <option value="MEDIUM" selected>Medium</option>
+                                    <option value="HIGH">High</option>
+                                    <option value="CRITICAL">Critical</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-category">Category</label>
+                                <select id="form-category" class="form-control">
+                                    <option value="College" selected>College</option>
+                                    <option value="Work">Work</option>
+                                    <option value="Personal">Personal</option>
+                                    <option value="Shopping">Shopping</option>
+                                    <option value="Health">Health</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="Meeting">Meeting</option>
+                                    <option value="Study">Study</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox" id="form-urgent">
+                                <span style="font-weight: 600; color: var(--color-urgent);">Mark as Urgent</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="closeModal('task-form-modal')">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="form-submit-btn">Save Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- DELETE CONFIRMATION MODAL -->
+        <div class="modal-overlay" id="delete-modal">
+            <div class="modal-content" style="max-width: 420px;">
+                <div class="modal-header">
+                    <h3 style="color: var(--color-urgent);">Delete Task</h3>
+                    <button class="modal-close" onclick="closeModal('delete-modal')">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 0.5rem;">
+                        Are you sure you want to delete this task?
+                    </p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                        This action cannot be undone.
+                    </p>
+                    <input type="hidden" id="delete-task-id">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeModal('delete-modal')">Cancel</button>
+                    <button class="btn btn-danger" id="confirm-delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="toast-container" aria-live="polite"></div>
+
+        <footer class="app-footer">
+            <p>VOX &copy; 2026 &bull; AI Voice-to-Text Task Manager using AWS &bull; College Engineering Project</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/space.js"></script>
+</body>
+</html>

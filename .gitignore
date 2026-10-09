@@ -1,0 +1,35 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python compiled bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+
+# Application uploaded temporary files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Local data storage
+backend/data/*.json
+!backend/data/.gitkeep
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Node / frontend build (if any in future)
+node_modules/
+dist/

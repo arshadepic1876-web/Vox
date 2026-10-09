@@ -1,0 +1,10 @@
+# Backend-specific ignore
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+uploads/*
+!uploads/.gitkeep
+data/*.json
+!data/.gitkeep

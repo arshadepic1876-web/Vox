@@ -1,0 +1,115 @@
+/* ==============================================================================
+   VOX - Responsive Breakpoints & Mobile Optimization
+   Mobile-first, Tablet, and Desktop Adaptive Layouts
+   ============================================================================== */
+
+/* Tablets and Below (<= 992px) */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile Devices and Small Tablets (<= 768px) */
+@media (max-width: 768px) {
+    .header-inner {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .header-status {
+        display: none; /* Hide status pill on mobile to save space */
+    }
+
+    .main-content {
+        padding: 1.25rem 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.4rem;
+    }
+
+    .stat-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .recorder-card {
+        padding: 1.75rem 1rem;
+    }
+
+    .mic-button {
+        width: 72px;
+        height: 72px;
+    }
+
+    .tasks-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .search-box {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .filter-pills {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .modal-content {
+        max-width: 95vw;
+        margin: 0.5rem;
+    }
+
+    .modal-body {
+        padding: 1rem;
+    }
+}
+
+/* Small Phones (<= 480px) */
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .task-card {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+        border-top: 1px solid var(--border);
+        padding-top: 0.5rem;
+        margin-left: 0;
+    }
+
+    .nav-item a span {
+        display: none; /* Icon-only nav on very narrow screens */
+    }
+
+    .nav-item a {
+        padding: 0.5rem;
+    }
+}
